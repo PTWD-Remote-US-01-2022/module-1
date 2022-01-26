@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Basics</title>
+        <meta charset="UTF-8" />
+        <!-- link tag is the last element in the head tag in order to allow for your styling to load prior to your html body content (what the user will see) -->
+        <!-- you may have multiple link tags, especially if your utilizing a style library -->
+        <!-- *** always make the link tag to your style file the last link tag *** -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#bottom__section">Bottom Section</a>
+            <a href="#">Login</a>
+            <a href="#">Signup</a>
+        </nav>
+
+        <h1>HTML Basics</h1>
+
+        <section>
+            <!-- you will usually not see section tags or other dividing tags as most developers just use div (divider) tags and then add the appropriate class or id to identify the div -->
+            <h2>Top Section - additional tags</h2>
+            <h3>ordered list</h3>
+            <ol>
+                <li>first item</li>
+                <li>second item</li>
+                <li>third item</li>
+                <li>fourth item</li>
+            </ol>
+            <br />
+            <h3>unordered list</h3>
+            <ul>
+                <li>first item</li>
+                <li>second item</li>
+                <li>third item</li>
+                <li>fourth item</li>
+            </ul>
+        </section>
+
+        <div>
+            <h3>Tables and Forms</h3>
+            <!-- avoid inline styling as it tends to override and screw with your stylesheet -->
+            <!-- <table class="tables" style="border: 1px solid black"> -->
+            <table class="tables">
+                <tr>
+                    <th>first column</th>
+                    <th>second column</th>
+                    <th>third column</th>
+                </tr>
+                <tr>
+                    <td>row 1 column 1</td>
+                    <td>row 1 column 2</td>
+                    <td>row 1 column 3</td>
+                </tr>
+                <tr>
+                    <td>row 2 column 1</td>
+                    <td>row 2 column 2</td>
+                    <td>row 2 column 3</td>
+                </tr>
+            </table>
+            <table class="tables">
+                <tr>
+                    <th>first row</th>
+                    <td>row 1 column 2</td>
+                    <td>row 1 column 3</td>
+                </tr>
+                <tr>
+                    <th>second row</th>
+                    <td>row 2 column 2</td>
+                    <td>row 2 column 3</td>
+                </tr>
+                <tr>
+                    <th>third row</th>
+                    <td>row 3 column 2</td>
+                    <td>row 3 column 3</td>
+                </tr>
+            </table>
+
+            <br />
+            <!-- usually urls for apis or your express app url endpoint will be set in the action -->
+            <!-- the method is used to determine the type of url call you will be making (ei: GET - to get data from an api or to query like in a search; POST - used to update or add data to a database through the call of an api or your express app url endpoint (also known as a route)) -->
+            <!-- <form action="/my-route-endpoint" method="GET"></form> -->
+            <form>
+                <!-- when creating label and input, the 'for' parameter in the label should match what you give as an 'id' for your input -->
+                <label for="nameInputField">Enter a name</label>
+                <input id="nameInputField" type="text" name="nameInput" />
+
+                <!-- in a form, the 'button' tag automatically has a type of submit. There is no need to set the type for it -->
+                <!-- when you click the button, it will submit the data from the input fields in your form, usually to the action url or route endpoint that you have entered using the method that was given to the form (ie: GET of POST) -->
+                <button>Save</button>
+                <!-- when you click on the button in a form, it tends to refresh the page. -->
+            </form>
+        </div>
+        <div id="bottom__section">
+            <h2>Bottom Section - header sizing</h2>
+            <h3>This is an h3</h3>
+            <h4>This is an h4</h4>
+            <h5>This is an h5</h5>
+            <h6>This is an h6</h6>
+
+            <p>This is the paragraph</p>
+        </div>
+
+        <footer>
+            <span>Made with 👽 at Ironhack!</span>
+        </footer>
+        <!-- Always place script tag at the bottom of the body in order to allow for the html content to load and the functions and methods in the script.js file can find the html elements you are trying to target -->
+        <!-- you may have multiple script tags, especially if your utilizing an external library -->
+        <!-- *** always make the script tag to your js file the last script tag *** -->
+        <script src="scripts.js"></script>
+    </body>
+</html>

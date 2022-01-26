@@ -1,0 +1,45 @@
+/* tag selectors have only the name of the html tag and thats it */
+body {
+    background-color: pink;
+}
+
+/* id selectors start with # and is followed by the word you added to the id parameter within an html tag */
+/* id's are unique and should not be repeated in your html code. This is important as id's can be used to jump to specific sections on your page using an anchor tag (link tag ei: a tag) */
+#bottom__section {
+    background-color: orange;
+}
+
+/* class selectors start with a . followed by the word you added to the class parameter within the html element(tag) */
+/* class selectors can be repeated in your html and is advised to use when having specific styling that will be repeated */
+.tables {
+    border: 3px solid lime;
+    margin: 5px 0 0;
+}
+
+.tables th,
+td {
+    border: 1px solid black;
+    padding: 2px 3px;
+
+    /* padding: 5px; 5px padding all around */
+
+    /* padding: 5px 7px; 5px padding top and bottom, 7px padding on left and right */
+
+    /* padding: 5px 7px 4px; 5px padding top, 7px padding on left and right, 4px and bottom */
+
+    /* padding: 5px 7px 4px 3px; 5px padding top, 7px padding on right, 4px and bottom, 3px on the left */
+
+    /* using margin you can add the values the same as you would for padding */
+}
+
+/* deep selectors is when you have to the path from parent to children using css selectors to get to the target element in which you want to style */
+body div > table.tables:nth-child(2) {
+    border: 3px solid red;
+}
+
+/* deep selectors will usually take residence over single selectors as they are more specific, even if they are added prior to the single selector */
+body div > table.tables:nth-child(3) {
+    border: 3px solid yellow;
+    padding: 0 30px;
+    margin-top: 40px;
+}
