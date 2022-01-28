@@ -1,0 +1,99 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    padding-top: 48px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 95%;
+    background-color: navy;
+    padding: 15px 35px;
+}
+
+nav > div {
+    float: right;
+}
+
+h1 {
+    text-align: center;
+}
+
+#box-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+#box-content div {
+    width: 42%;
+    border: 1px solid black;
+    height: 480px;
+    padding: 10px 20px;
+    /* in order to use flexbox, the parent element has to have display flex set on it. This will allow you to use css properties like align-items, justify-content, flex-direction, etc. */
+    display: flex;
+    /* align-items controls the children on the vertical ( or Y) axis of the parent */
+    align-items: center;
+    /* justify-content controls the children on the horizontal ( or X ) axis of the parent */
+    justify-content: center;
+    /* when using flex-direction: column, the properties of align-items and justify-content now handle the opposite axis that they originally controls when the direction was row (default direction) */
+    flex-direction: column;
+}
+
+#box-content div p {
+    padding: 0 54px;
+    margin: 0;
+}
+
+#box-content div:nth-child(1) {
+    justify-content: space-between;
+}
+
+#box-content div:nth-child(1) img {
+    width: 80%;
+}
+
+#box-content div:nth-child(1) p {
+    /* padding: 0 54px; */
+    /* margin: 0; */
+}
+
+#random-background {
+    /* when adding the path for a url to a css property, remember to make the relative path as if you were in the html file and not the css file */
+    background-image: url("images/3D-Planet.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 42%; */
+    /* height: 200px; */
+    /* padding: 10px 20px; */
+}
+
+#random-background p {
+    color: gainsboro;
+}
+
+.body-of-page {
+    padding: 0 35px;
+}
+
+/* media queries are used for responsive design. You would usually design mobile first in which case you would use min-width parameter with the smallest screen size and as you work your way down the css file ad the media query for the larger screen sizes. */
+
+/* when you are working from desktop view and down to mobile. Your parameter for the media query would be max-width and you would then trickle down the screen sizes from laptop (or small desktop view) down to mobile */
+@media (max-width: 768px) {
+    #box-content {
+        flex-direction: column;
+    }
+
+    #box-content div {
+        width: 102%;
+    }
+
+    #box-content div p {
+        padding: 0 33px;
+    }
+}
