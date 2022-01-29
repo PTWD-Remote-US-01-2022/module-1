@@ -128,3 +128,32 @@ callThisFunction(firstCallback, 'Bill', 'Ted');
 
 // theCallBack('blah', () => console.log('finals done'))
 // ===================================
+
+//  another example of a callback function and practical use for it
+
+
+const arr1 = ['blah', 'cat', 'dog']
+const arr2 = [3, 2, 6, 5, 7, 4, 3, 7]
+const arr3 = [true, false, {name: 'Blah', age: 22}, [5, 4, true]]
+
+const getTheSumValue = (param1, param2) => {
+  // console.log(`${param1} and ${param2}`);
+  return param1 + param2;
+}
+
+const getProduct = (param1, param2) => {
+  return param1 * param2;
+}
+
+const getTheSyncedValues = (cb, firstArr, secondArr) => {
+  const elem1 = Math.floor(Math.random() * (firstArr.length + 10))
+  const elem2 = typeof secondArr === 'string' ? (string.length * 6) / 2 : (secondArr.length * 3) / 2
+
+  return cb(elem1, elem2);
+}
+
+// getTheSyncedValues(getTheSumValue, 'Bill', 'Ted');
+
+console.log(getTheSyncedValues(getTheSumValue, arr2, arr3))
+
+console.log(getTheSyncedValues(getProduct, arr2, 'blah'))
