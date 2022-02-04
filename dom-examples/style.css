@@ -1,0 +1,23 @@
+body {
+    background-color: aquamarine;
+}
+
+.makeBig {
+    font-size: 60px;
+}
+
+.makeTiny {
+    font-size: 10px;
+}
+
+.content-div {
+    color: purple;
+    height: 15rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 1rem = 16px */
