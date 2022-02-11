@@ -33,10 +33,12 @@ class MemoryGame {
 
   checkIfPair(card1, card2) {
 
-    this.pairsClicked ++;
+    this.pairsClicked ++; // this.pairsClicked += 1;
 
     if (card1 === card2){
       this.pairsGuessed ++;
+
+      this.checkIfFinished();
 
       return true;
     } 
@@ -46,7 +48,20 @@ class MemoryGame {
   }
 
   checkIfFinished() {
-    // ... write your code here
+    // if(this.pairsGuessed === 12){
+    if(this.pairsGuessed === this.cards.length/2){
+      document.getElementById("memory-board").innerHTML = "";
+
+      let h1 = document.createElement("h1");
+
+      h1.innerHTML = "Congrats! You won! ❤️";
+
+      document.getElementById("memory-board").appendChild(h1);
+
+      return true
+    } else {
+      return false;
+    }
   }
 }
 
