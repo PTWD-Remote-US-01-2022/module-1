@@ -40,7 +40,6 @@ function draw(){
 
     fireball.x += 4;
 
-
     timeoutId = setTimeout(draw, 20);
 }
 
